@@ -1,5 +1,4 @@
-console.log('global.js v3.5 loaded');
-console.log('phone_number_to_e164 loaded');
+console.log('global.js v4.0 loaded');
 
 // Function to dynamically load a script
 function loadScript(src, callback) {
@@ -64,7 +63,6 @@ function setSessionStorageItem(key, value) {
 
 // Function to initialize form input storage
 function initializeFormInputStorage() {
-  console.log('form_input_storage.js v1.2 loaded');
 
   const formFields = document.querySelectorAll('input, textarea, select');
 
