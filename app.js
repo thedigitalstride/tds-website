@@ -1,4 +1,4 @@
-console.log('global.js v4.0 loaded');
+console.log('app.js v4.1 loaded');
 
 // Function to dynamically load a script
 function loadScript(src, callback) {
@@ -57,7 +57,7 @@ function isSessionStorageAvailable() {
 // Wrapper function to set item in session storage and log the update
 function setSessionStorageItem(key, value) {
   sessionStorage.setItem(key, value);
-  logSessionStorage();
+  // logSessionStorage();
   updateDataLayerWithSessionStorage();
 }
 
@@ -93,7 +93,7 @@ function populateFormData(formFields) {
     const fieldName = field.name;
     let storedValue = sessionStorage.getItem(fieldName);
 
-    console.log(`Populating field: ${fieldName}, storedValue: ${storedValue}`);
+    // console.log(`Populating field: ${fieldName}, storedValue: ${storedValue}`);
 
     if (storedValue !== null && storedValue !== 'undefined') {
       try {
@@ -162,7 +162,7 @@ function saveUrlParametersToSessionStorage() {
       setSessionStorageItem(key, urlParams[key]);
     }
   }
-  console.log('URL parameters saved to session storage:', urlParams);
+  // console.log('URL parameters saved to session storage:', urlParams);
 }
 
 // Function to update the dataLayer with sessionStorage data
@@ -172,7 +172,7 @@ function updateDataLayerWithSessionStorage() {
     const key = sessionStorage.key(i);
     sessionData[key] = sessionStorage.getItem(key);
   }
-  console.log('Session data to be pushed to dataLayer:', sessionData); // Debugging log
+  // console.log('Session data to be pushed to dataLayer:', sessionData); // Debugging log
   if (!window.dataLayer) {
     window.dataLayer = [];
   }
@@ -180,7 +180,7 @@ function updateDataLayerWithSessionStorage() {
     event: 'sessionData',
     sessionData: sessionData
   });
-  console.log('DataLayer updated with session storage data:', sessionData);
+  // console.log('DataLayer updated with session storage data:', sessionData);
 }
 
 // Function to store the referrer URL in sessionStorage
@@ -189,7 +189,7 @@ function storeReferrerUrl() {
   const referrerUrl = document.referrer;
   if (referrerUrl && !sessionStorage.getItem(referrerKey)) {
     sessionStorage.setItem(referrerKey, referrerUrl);
-    console.log(`Referrer URL stored: ${referrerUrl}`);
+    // console.log(`Referrer URL stored: ${referrerUrl}`);
   } else {
     console.log('Referrer URL already stored or not available.');
   }
