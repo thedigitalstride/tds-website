@@ -1,0 +1,14 @@
+{
+  "name": "tds-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ian Hancock - The Digital Stride",
+  "license": "ISC",
+  "dependencies": {
+    "libphonenumber-js": "^1.11.5"
+  }
+}
