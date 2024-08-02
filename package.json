@@ -1,8 +1,8 @@
 {
   "name": "tds-website",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
+  "description": "Function to update the phone number in any field that contain 'phone' to E164 format",
+  "main": "phone-field-formatter-e164.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

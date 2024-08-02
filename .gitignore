@@ -33,3 +33,11 @@ bower_components/
 # lock files
 package-lock.json
 yarn.lock
+
+# Local configuration files
+*.local.js
+*.local.json
+
+# Temporary files
+temp/
+tmp/
